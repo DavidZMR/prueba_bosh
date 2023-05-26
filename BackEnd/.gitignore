@@ -1,0 +1,10 @@
+/.idea/
+*.pyc
+.DS_Store
+BackEnd/generalInfo/rugged-scion-361021-a18a82dabd22.json
+BackEnd/generalInfo/serviceAccountKey.json
+Backend/_pycache_
+Backend/directions/_pycache_
+Backend/functions/_pycache_
+Backend/generalInfo/_pycache_
+Backend/util/_pycache_
