@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Agregar usuarios</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Username" formControlName="username">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Mail" formControlName="mail">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input type="password" matInput placeholder="Password" formControlName="password">
+                </mat-form-field>
+            </p>
+            <p *ngIf="form.controls['password'].hasError('minlength')" class="error">
+                Invalid password
+            </p>
+            <p *ngIf="sendError" class="error">
+                {{ error }}
+            </p>
+
+            <div class="button">
+                <button type="submit" mat-button>Agregar</button>
+            </div>
+
+        </form>
+    </mat-card-content>
+</mat-card>
